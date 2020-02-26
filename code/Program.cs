@@ -79,7 +79,30 @@ namespace code
 
         }
 
+        public void VoteRule()
+        {
+            Console.WriteLine("Which Rule Do You Want To Use?");
+            Console.WriteLine("Qualified Majority (1)");
+            Console.WriteLine("Unaminus (2)");
+            string answer = "";
+        retry:
+            answer = Console.ReadLine();
+            if (answer == "1")
+            {
 
+            }
+            else if (answer == "2")
+            {
+
+            }
+
+            else
+            {
+                Console.WriteLine("Your Answer Was Not Valid! Try again");
+                goto retry;
+            }
+
+        }
 
 
         static void Main(string[] args)
@@ -95,10 +118,10 @@ namespace code
             Console.WriteLine("Your options:");
             Console.WriteLine("Enter 1 To Edit A Countries Vote.");
             Console.WriteLine("Enter 2 To Edit The Voting Rule.");
-            Console.WriteLine("Enter 3 To Edit Contires Participating");
+            Console.WriteLine("Enter 3 To Edit Contries Participating");
             Console.WriteLine("Enter 4 To Quit.");
             Console.WriteLine("***************************************");
-            input:
+        input:
             string Response = Console.ReadLine();
             if (Response == "4")
             {
@@ -108,14 +131,14 @@ namespace code
             {
                 Selection();
             }
-
-
-
-
+            else if (Response == "2")
+            {
+                VoteRule();
+            }
             else
             {
                 Console.WriteLine("That input Is Not Valid, Try Again.");
-                goto input; 
+                goto input;
             }
         }
 
