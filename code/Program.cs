@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Collections.Generic;
 
 namespace code
 {
@@ -29,6 +31,11 @@ namespace code
         {
             Vote = newVote; 
         }
+        public void printDetails()
+        {
+            Console.WriteLine($"Name = {Name}\tPopulation = {Pop}\tVote  = {Vote} ");
+        }
+
     }
     class Program
     {
@@ -59,11 +66,9 @@ namespace code
         Countries SLOVANIA = new Countries("Slovenia ", 2067000, true, "Yes");
         Countries SPAIN = new Countries("Spain ", 46660000, true, "Yes");
         Countries SWEDEN = new Countries("Sweden ", 10120000, false, "Yes");
-      
 
-        //public string[] euroZone = { AUSTRIA, "Belgium", "Cyprus", "Estonia", "Finland", "France", "Germany", "Greece", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Portugal", "Slovakia", "Slovenia", "Spain" };
-        string[] all = { "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania ", "Slovakia", "Slovenia", "Spain", "Sweden" };
 
+        
         public void Selection()
         {
             Console.WriteLine("Are you incluiding all countries or just the Eurozone countries? (All/Euro)");
@@ -94,7 +99,7 @@ namespace code
 
         public void display()
         {
-        Console.WriteLine($"Name = {AUSTRIA.Name}     Population = {AUSTRIA.Pop}    Vote  = {AUSTRIA.Vote} ");
+
         }
         
            
@@ -103,7 +108,36 @@ namespace code
         static void Main(string[] args)
         {
             Program p = new Program();
+            List<Countries> list = new List<Countries>();
+            list.Add(p.AUSTRIA);
+            list.Add(p.BELGIUM);
+            list.Add(p.BULGARIA);
+            list.Add(p.CROATIA);
+            list.Add(p.CYPRUS);
+            list.Add(p.CZECHREPUBLIC);
+            list.Add(p.DENMARK);
+            list.Add(p.ESTONIA);
+            list.Add(p.FINLAND);
+            list.Add(p.FRANCE);
+            list.Add(p.GERMANY);
+            list.Add(p.GREECE);
+            list.Add(p.HUNGARY);
+            list.Add(p.IRELAND);
+            list.Add(p.ITALY);
+            list.Add(p.LATVIA);
+            list.Add(p.LITHUANIA);
+            list.Add(p.LUXEMBOURG);
+            list.Add(p.MALTA);
+            list.Add(p.NETHERLANDS);
+            list.Add(p.POLAND);
+            list.Add(p.PORTUGAL);
+            list.Add(p.ROMANIA);
+            list.Add(p.SLOVAKIA);
+            list.Add(p.SLOVANIA);
+            list.Add(p.SPAIN);
+            list.Add(p.SWEDEN);
             p.menu();
+            list.ElementAt(1).Pop;
             
         }
 
