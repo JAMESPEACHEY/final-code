@@ -61,7 +61,7 @@ namespace code
         Countries SWEDEN = new Countries("Sweden ", 10120000, false, "Yes");
       
 
-        public string[] euroZone = { "Austria", "Belgium", "Cyprus", "Estonia", "Finland", "France", "Germany", "Greece", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Portugal", "Slovakia", "Slovenia", "Spain" };
+        //public string[] euroZone = { AUSTRIA, "Belgium", "Cyprus", "Estonia", "Finland", "France", "Germany", "Greece", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Portugal", "Slovakia", "Slovenia", "Spain" };
         string[] all = { "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania ", "Slovakia", "Slovenia", "Spain", "Sweden" };
 
         public void Selection()
@@ -94,9 +94,12 @@ namespace code
 
         public void display()
         {
-            Console.WriteLine($"Name = {AUSTRIA.Name}     Population = {AUSTRIA.Pop}    Vote  = {AUSTRIA.Vote} ");
-           
+        Console.WriteLine($"Name = {AUSTRIA.Name}     Population = {AUSTRIA.Pop}    Vote  = {AUSTRIA.Vote} ");
         }
+        
+           
+           
+        
         static void Main(string[] args)
         {
             Program p = new Program();
