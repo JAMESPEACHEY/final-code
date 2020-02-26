@@ -100,25 +100,10 @@ namespace code
 
 
 
-            }
-            else if (answer == "1")
-            {
-
-
-            }
-
-
-            else
-            {
-                Console.WriteLine("Your Answer Was Not Valid! Try again");
-                goto retry;
-            }
+        public void display()
+        {
+           
         }
-            public void display()
-            { 
-         
-        }
-
         static void Main(string[] args)
         {
             Program p = new Program();
@@ -148,7 +133,7 @@ namespace code
             }
             else if (Response == "1")
             {
-
+                display();
             }
              
 
