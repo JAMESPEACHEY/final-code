@@ -25,6 +25,10 @@ namespace code
             EU = eu; 
             Vote = vote;
         }
+        public void changeVote(string newVote)
+        {
+            Vote = newVote;
+        }
     }
     class Program
     {
@@ -55,6 +59,7 @@ namespace code
         Countries SLOVANIA = new Countries("Slovenia ", 2067000, true, "Yes");
         Countries SPAIN = new Countries("Spain ", 46660000, true, "Yes");
         Countries SWEDEN = new Countries("Sweden ", 10120000, false, "Yes");
+      
 
         public string[] euroZone = { "Austria", "Belgium", "Cyprus", "Estonia", "Finland", "France", "Germany", "Greece", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Portugal", "Slovakia", "Slovenia", "Spain" };
         string[] all = { "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania ", "Slovakia", "Slovenia", "Spain", "Sweden" };
@@ -90,11 +95,13 @@ namespace code
         public void display()
         {
             Console.WriteLine($"Name = {AUSTRIA.Name}     Population = {AUSTRIA.Pop}    Vote  = {AUSTRIA.Vote} ");
+           
         }
         static void Main(string[] args)
         {
             Program p = new Program();
             p.menu();
+            
         }
 
         public void menu()
@@ -120,7 +127,7 @@ namespace code
             }
             else if (Response == "1")
             {
-                display();
+                
             }
              
 
