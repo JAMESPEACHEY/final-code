@@ -67,6 +67,7 @@ namespace code
             answer = Console.ReadLine().ToUpper();
             if (answer == "ALL") 
             {
+                
                 bool Selection = true;
                 
 
@@ -86,10 +87,36 @@ namespace code
 
         }
 
-
-        public void display()
+        public void VoteRule()
         {
-           
+            Console.WriteLine("Which Voting Rule Do You Want To Use?");
+            Console.WriteLine("Qualified Majority (1)");
+            Console.WriteLine("Anaminus (2)");
+            string answer = "";
+        retry:
+            answer = Console.ReadLine();
+            if (answer == "2")
+            {
+
+
+
+            }
+            else if (answer == "1")
+            {
+
+
+            }
+
+
+            else
+            {
+                Console.WriteLine("Your Answer Was Not Valid! Try again");
+                goto retry;
+            }
+        }
+            public void display()
+            { 
+         
         }
 
         static void Main(string[] args)
