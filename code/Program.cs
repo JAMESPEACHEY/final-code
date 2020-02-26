@@ -34,8 +34,7 @@ namespace code
                 Countries Czech_Republic = new Countries("Czech Republic", 10650000, false);
                 Countries Denmark = new Countries("Denmark", 5603000, false);
                 Countries Estonia = new Countries("Estonia", 1328000, true);
-                Countries Finland = new Countries("Finland", 1328000, true);
-                Countries France = new Countries("France", 1328000, true);
+                Countries Finland = new Countries("Finland", 5513000, true);
                 Countries Germany = new Countries("Germany", 1328000, true);
                 Countries Greece = new Countries("Greece", 1328000, true);
                 Countries Hungary = new Countries("Hungary", 1328000, true);
