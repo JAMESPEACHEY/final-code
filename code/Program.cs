@@ -65,7 +65,7 @@ namespace code
             string answer = "";
         retry:
             answer = Console.ReadLine().ToUpper();
-            if (answer == "ALL")
+            if (answer == "ALL") 
             {
                 bool Selection = true;
                 
