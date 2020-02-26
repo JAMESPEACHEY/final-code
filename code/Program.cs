@@ -101,24 +101,11 @@ namespace code
             Console.WriteLine("Enter 3 To Edit Contires Participating");
             Console.WriteLine("Enter 4 To Quit.");
             Console.WriteLine("***************************************");
+            input:
             string Response = Console.ReadLine();
             if (Response == "4")
             {
                 return;
-            }
-
-
-
-
-
-
-
-
-
-
-            else if(Response == "1")
-            {
-                changeVote()
             }
         }
 
