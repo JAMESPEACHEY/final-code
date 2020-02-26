@@ -18,7 +18,7 @@ namespace code
             EU = false;
             Vote = "YES";
         }
-        public Countries(string name, int pop, bool eu string vote)
+        public Countries(string name, int pop, bool eu, string vote)
         {
             Name = name;
             Pop = pop;
@@ -37,6 +37,7 @@ namespace code
         Countries Denmark = new Countries("Denmark", 5603000, false, "Yes");
         Countries Estonia = new Countries("Estonia", 1328000, true, "Yes");
         Countries Finland = new Countries("Finland", 5513000, true, "Yes");
+        Countries France = new Countries("France", 66990000, true, "Yes");
         Countries Germany = new Countries("Germany", 82790000, true, "Yes");
         Countries Greece = new Countries("Greece", 10740000, true, "Yes");
         Countries Hungary = new Countries("Hungary", 9773000, true, "Yes");
@@ -63,7 +64,7 @@ namespace code
             answer = Console.ReadLine().ToUpper();
             if (answer == "ALL")
             {
-                Console.WriteLine(Romania.Vote); 
+                 
             }
             else if (answer == "EURO")
             {
