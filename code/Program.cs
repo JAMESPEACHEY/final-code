@@ -86,9 +86,25 @@ namespace code
         {
             Program p = new Program();
             p.Selection();
-
+            p.menu();
         }
 
+        public void menu()
+        {
+            Console.WriteLine("          Voting Calculator");
+            Console.WriteLine("***************************************");
+            Console.WriteLine("Your options:");
+            Console.WriteLine("Enter 1 To Edit A Countries Vote.");
+            Console.WriteLine("Enter 2 To Edit The Voting Rule.");
+            Console.WriteLine("Enter 3 To Edit Contires Participating");
+            Console.WriteLine("Enter 4 To Quit.");
+            Console.WriteLine("***************************************");
+            string Response = Console.ReadLine();
+            if (Response == "4")
+            {
+                return;
+            }
+        }
 
     }
 
