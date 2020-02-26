@@ -28,33 +28,33 @@ namespace code
     }
     class Program
     {
-        Countries Austria = new Countries("Austria", 8822000, true, "Yes" );
-        Countries Belgium = new Countries("Belgium", 11400000, true, "Yes");
-        Countries Bulgaria = new Countries("Bulgaria", 7050000, false, "Yes");
-        Countries Croatia = new Countries("Croatia", 4076000, false, "Yes");
-        Countries Cyprus = new Countries("Cyprus", 1170000, true, "Yes");
-        Countries Czech_Republic = new Countries("Czech Republic", 10650000, false, "Yes");
-        Countries Denmark = new Countries("Denmark", 5603000, false, "Yes");
-        Countries Estonia = new Countries("Estonia", 1328000, true, "Yes");
-        Countries Finland = new Countries("Finland", 5513000, true, "Yes");
-        Countries France = new Countries("France", 66990000, true, "Yes");
-        Countries Germany = new Countries("Germany", 82790000, true, "Yes");
-        Countries Greece = new Countries("Greece", 10740000, true, "Yes");
-        Countries Hungary = new Countries("Hungary", 9773000, true, "Yes");
-        Countries Ireland = new Countries("Ireland", 4830000, true, "Yes");
-        Countries Italy = new Countries("Italy", 60480000, true, "Yes");
-        Countries Latvia = new Countries("Latvia", 1920000, true, "Yes");
-        Countries Lithuania = new Countries("Lithuania", 2794000, true, "Yes");
-        Countries Luxembourg = new Countries("Luxembourg", 602005000, true, "Yes");
-        Countries Malta = new Countries("Malta", 493559, true, "Yes");
-        Countries Netherlands = new Countries("Netherlands ", 17180000, true, "Yes");
-        Countries Poland = new Countries("Poland ", 37980000, true, "Yes");
-        Countries Portugal = new Countries("Portugal ", 1029000, true, "Yes");
-        Countries Romania = new Countries("Romania ", 19530000, true, "Yes");
-        Countries Slovakia = new Countries("Slovakia ", 5450000, true, "Yes");
-        Countries Slovenia = new Countries("Slovenia ", 2067000, true, "Yes");
-        Countries Spain = new Countries("Spain ", 46660000, true, "Yes");
-        Countries Sweden = new Countries("Sweden ", 10120000, true, "Yes");
+        Countries AUSTRIA = new Countries("Austria", 8822000, true, "Yes" );
+        Countries BELGIUM = new Countries("Belgium", 11400000, true, "Yes");
+        Countries BULGARIA = new Countries("Bulgaria", 7050000, false, "Yes");
+        Countries CROATIA = new Countries("Croatia", 4076000, false, "Yes");
+        Countries CYPRUS = new Countries("Cyprus", 1170000, true, "Yes");
+        Countries CZECHREPUBLIC = new Countries("Czech Republic", 10650000, false, "Yes");
+        Countries DENMARK = new Countries("Denmark", 5603000, false, "Yes");
+        Countries ESTONIA = new Countries("Estonia", 1328000, true, "Yes");
+        Countries FINLAND = new Countries("Finland", 5513000, true, "Yes");
+        Countries FRANCE = new Countries("France", 66990000, true, "Yes");
+        Countries GERMANY = new Countries("Germany", 82790000, true, "Yes");
+        Countries GREECE = new Countries("Greece", 10740000, true, "Yes");
+        Countries HUNGARY = new Countries("Hungary", 9773000, true, "Yes");
+        Countries IRELAND = new Countries("Ireland", 4830000, true, "Yes");
+        Countries ITALY = new Countries("Italy", 60480000, true, "Yes");
+        Countries LATVIA = new Countries("Latvia", 1920000, true, "Yes");
+        Countries LITHUANIA = new Countries("Lithuania", 2794000, true, "Yes");
+        Countries LUXEMBOURG = new Countries("Luxembourg", 602005000, true, "Yes");
+        Countries MALTA = new Countries("Malta", 493559, true, "Yes");
+        Countries NETHERLANDS = new Countries("Netherlands ", 17180000, true, "Yes");
+        Countries POLAND = new Countries("Poland ", 37980000, true, "Yes");
+        Countries PORTUGAL = new Countries("Portugal ", 1029000, true, "Yes");
+        Countries ROMANIA = new Countries("Romania ", 19530000, true, "Yes");
+        Countries SLOVAKIA = new Countries("Slovakia ", 5450000, true, "Yes");
+        Countries SLOVANIA = new Countries("Slovenia ", 2067000, true, "Yes");
+        Countries SPAIN = new Countries("Spain ", 46660000, true, "Yes");
+        Countries SWEDEN = new Countries("Sweden ", 10120000, true, "Yes");
 
         public void Selection()
         {
@@ -80,7 +80,10 @@ namespace code
         }
 
 
-
+        public void calculator()
+        {
+            if()
+        }
 
         static void Main(string[] args)
         {
@@ -95,7 +98,7 @@ namespace code
             Console.WriteLine("Your options:");
             Console.WriteLine("Enter 1 To Edit A Countries Vote.");
             Console.WriteLine("Enter 2 To Edit The Voting Rule.");
-            Console.WriteLine("Enter 3 To Edit Contires Participating");
+            Console.WriteLine("Enter 3 To Edit Countries Participating");
             Console.WriteLine("Enter 4 To Quit.");
             Console.WriteLine("***************************************");
             input:
@@ -108,7 +111,10 @@ namespace code
             {
                 Selection();
             }
+            else if (Response == "1")
+            {
 
+            }
              
 
 
