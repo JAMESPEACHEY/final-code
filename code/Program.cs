@@ -79,13 +79,15 @@ namespace code
 
         }
 
+        static void changeVote()
+        {
 
+        }
 
 
         static void Main(string[] args)
         {
             Program p = new Program();
-            p.Selection();
             p.menu();
         }
 
@@ -103,6 +105,20 @@ namespace code
             if (Response == "4")
             {
                 return;
+            }
+
+
+
+
+
+
+
+
+
+
+            else if(Response == "1")
+            {
+                changeVote()
             }
         }
 
