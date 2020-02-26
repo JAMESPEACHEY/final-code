@@ -89,9 +89,8 @@ namespace code
 
         public void display()
         {
-           
+            Console.WriteLine($"Name = {AUSTRIA.Name}     Population = {AUSTRIA.Pop}    Vote  = {AUSTRIA.Vote} ");
         }
-
         static void Main(string[] args)
         {
             Program p = new Program();
@@ -121,7 +120,7 @@ namespace code
             }
             else if (Response == "1")
             {
-
+                display();
             }
              
 
