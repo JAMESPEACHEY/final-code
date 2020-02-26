@@ -1,8 +1,6 @@
 ﻿using System;
-
 namespace code
 {
-
 
     class Countries
     {
@@ -93,7 +91,7 @@ namespace code
             }
             else if (answer == "2")
             {
-
+                
             }
 
             else
@@ -107,6 +105,7 @@ namespace code
 
         static void Main(string[] args)
         {
+
             Program p = new Program();
             p.menu();
         }
@@ -133,7 +132,7 @@ namespace code
             }
             else if (Response == "2")
             {
-                VoteRule();
+                
             }
             else
             {
