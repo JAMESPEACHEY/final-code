@@ -31,68 +31,7 @@ namespace code
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            public void Selection()
+             public void Selection()
             {
                 Console.WriteLine("Are you incluiding all countries or just the Eurozone countries? (All/Euro)");
                 string answer = "";
