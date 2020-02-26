@@ -27,7 +27,7 @@ namespace code
         }
         public void changeVote(string newVote)
         {
-            Vote = newVote;
+            Vote = newVote; 
         }
     }
     class Program
