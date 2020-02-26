@@ -26,6 +26,7 @@ namespace code
         {
             static void Main(string[] args)
             {
+
                 Countries Austria = new Countries("Austria", 8822000, true);
                 Countries Belgium = new Countries("Belgium", 11400000, true);
                 Countries Bulgaria = new Countries("Bulgaria", 7050000, false);
@@ -52,6 +53,31 @@ namespace code
                 Countries Slovenia = new Countries("Slovenia ", 1328000, true);
                 Countries Spain = new Countries("Spain ", 1328000, true);
                 Countries Sweden = new Countries("Sweden ", 1328000, true);
+
+            }
+
+
+
+             public void Selection()
+            {
+                Console.WriteLine("Are you incluiding all countries or just the Eurozone countries? (All/Euro)");
+                string answer = "";
+                retry:
+                answer = Console.ReadLine().ToUpper();
+                if (answer == "ALL")
+                {
+
+                }
+                else if (answer == "EURO")
+                {
+
+                }
+
+                else
+                {
+                    Console.WriteLine("Your Answer Was Not Valid! Try again");
+                    goto retry; 
+                }
 
             }
         }
