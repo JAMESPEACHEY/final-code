@@ -9,12 +9,14 @@ namespace code
         public string Name;
         public int Pop;
         public bool EU;
+        public string Vote;
 
         public Countries()
         {
             Name = "Default";
             Pop = 0;
             EU = false;
+            Vote = "YES";
         }
         public Countries(string name, int pop, bool eu)
         {
@@ -60,7 +62,7 @@ namespace code
             answer = Console.ReadLine().ToUpper();
             if (answer == "ALL")
             {
-
+                Console.WriteLine(Romania.Vote);
             }
             else if (answer == "EURO")
             {
@@ -74,6 +76,10 @@ namespace code
             }
 
         }
+
+
+
+
         static void Main(string[] args)
         {
             Program p = new Program();
