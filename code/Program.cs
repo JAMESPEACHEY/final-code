@@ -4,7 +4,7 @@ namespace code
 {
 
 
-class Countries
+    class Countries
     {
         private string Name;
         private int Pop;
@@ -22,11 +22,13 @@ class Countries
             Pop = pop;
             EU = eu;
         }
-    class Program
-    {
-        static void Main(string[] args)
+        class Program
         {
-            
+            static void Main(string[] args)
+            {
+
+            }
         }
     }
 }
+
