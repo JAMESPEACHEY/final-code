@@ -40,7 +40,7 @@ namespace code
         Countries FRANCE = new Countries("France", 66990000, true, "Yes");
         Countries GERMANY = new Countries("Germany", 82790000, true, "Yes");
         Countries GREECE = new Countries("Greece", 10740000, true, "Yes");
-        Countries HUNGARY = new Countries("Hungary", 9773000, true, "Yes");
+        Countries HUNGARY = new Countries("Hungary", 9773000, false, "Yes");
         Countries IRELAND = new Countries("Ireland", 4830000, true, "Yes");
         Countries ITALY = new Countries("Italy", 60480000, true, "Yes");
         Countries LATVIA = new Countries("Latvia", 1920000, true, "Yes");
@@ -48,13 +48,15 @@ namespace code
         Countries LUXEMBOURG = new Countries("Luxembourg", 602005000, true, "Yes");
         Countries MALTA = new Countries("Malta", 493559, true, "Yes");
         Countries NETHERLANDS = new Countries("Netherlands ", 17180000, true, "Yes");
-        Countries POLAND = new Countries("Poland ", 37980000, true, "Yes");
+        Countries POLAND = new Countries("Poland ", 37980000, false, "Yes");
         Countries PORTUGAL = new Countries("Portugal ", 1029000, true, "Yes");
-        Countries ROMANIA = new Countries("Romania ", 19530000, true, "Yes");
+        Countries ROMANIA = new Countries("Romania ", 19530000, false, "Yes");
         Countries SLOVAKIA = new Countries("Slovakia ", 5450000, true, "Yes");
         Countries SLOVANIA = new Countries("Slovenia ", 2067000, true, "Yes");
         Countries SPAIN = new Countries("Spain ", 46660000, true, "Yes");
-        Countries SWEDEN = new Countries("Sweden ", 10120000, true, "Yes");
+        Countries SWEDEN = new Countries("Sweden ", 10120000, false, "Yes");
+
+        string[] euroZone = ["Austria", "Belgium", "Cyprus", "Estonia","Finland", "France", "Germany", "Greece", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Portugal", "Slovakia", "Slovenia", "Spain"];
 
         public void Selection()
         {
@@ -64,12 +66,16 @@ namespace code
             answer = Console.ReadLine().ToUpper();
             if (answer == "ALL")
             {
-                 
+                bool Selection = true;
+                
+
             }
             else if (answer == "EURO")
             {
-
+                bool Selection = false;
+                
             }
+
 
             else
             {
@@ -80,9 +86,9 @@ namespace code
         }
 
 
-        public void calculator()
+        public void display()
         {
-            if()
+           Console.WriteLine($"Name: 
         }
 
         static void Main(string[] args)
@@ -93,6 +99,7 @@ namespace code
 
         public void menu()
         {
+            display();
             Console.WriteLine("          Voting Calculator");
             Console.WriteLine("***************************************");
             Console.WriteLine("Your options:");
