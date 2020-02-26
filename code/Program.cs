@@ -79,7 +79,8 @@ namespace code
             Countries Spain = new Countries("Spain ", 46660000, true);
             Countries Sweden = new Countries("Sweden ", 10120000, true);
 
-            
+            Program p = new Program();
+            p.Selection();
 
         }
 
