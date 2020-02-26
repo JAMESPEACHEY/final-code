@@ -62,7 +62,7 @@ namespace code
             answer = Console.ReadLine().ToUpper();
             if (answer == "ALL")
             {
-                Console.WriteLine(Romania.Vote);
+                Console.WriteLine(Romania.Vote); 
             }
             else if (answer == "EURO")
             {
