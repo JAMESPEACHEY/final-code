@@ -26,7 +26,6 @@ namespace code
         {
             static void Main(string[] args)
             {
-                Countries France = new Countries("france", 1000, true);
 
             }
             public void Selection()
