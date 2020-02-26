@@ -22,7 +22,7 @@ namespace code
         {
             Name = name;
             Pop = pop;
-            EU = eu;
+            EU = eu; 
             Vote = vote;
         }
     }
