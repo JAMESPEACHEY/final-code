@@ -85,7 +85,6 @@ namespace code
         static void Main(string[] args)
         {
             Program p = new Program();
-            p.Selection();
             p.menu();
         }
 
@@ -99,10 +98,24 @@ namespace code
             Console.WriteLine("Enter 3 To Edit Contires Participating");
             Console.WriteLine("Enter 4 To Quit.");
             Console.WriteLine("***************************************");
+            input:
             string Response = Console.ReadLine();
             if (Response == "4")
             {
                 return;
+            }
+            else if (Response == "3")
+            {
+                Selection();
+            }
+
+
+
+
+            else
+            {
+                Console.WriteLine("That input Is Not Valid, Try Again.");
+                goto input;
             }
         }
 
