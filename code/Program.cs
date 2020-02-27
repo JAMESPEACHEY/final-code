@@ -279,21 +279,23 @@ namespace code
                             totalpop = totalpop + checks.Pop;
                         }
                     }
-                    foreach (Countries checking in list)
-                    {
-                        if (checking.Vote == "No")
-                        {
-                            percent = percent - (checking.Pop / totalpop);
-                        }
-                    }
-                    if (percent <= 0)
-                    {
-                        Fail();
-                    }
-                    else
-                    {
-                        Pass();
-                    }
+                    
+                foreach (Countries checking in list)
+                {
+                       if (checking.Vote == "No")
+                       {
+                           percent = percent - (totalpop/ checking.Pop);
+                       }
+                   }
+                   if (percent <= 0)
+                   {
+                       Fail();
+                   }
+                   else if (percent > 0)
+                   {
+                       //Console.WriteLine(percent);
+                       Pass();
+                   }
                 }
                 else if (All == false)
                 {
@@ -308,16 +310,18 @@ namespace code
                     {
                         if ((checking1.Vote == "No") && (checking1.EU == true))
                         {
-                            percent = percent - (checking1.Pop / totalpop);
+                            percent = percent - (totalpop/ checking1.Pop);
                         }
                     }
                     if (percent <= 0)
                     {
                         Fail();
                     }
-                    else
+                    else if (percent > 0)
                     {
                         Pass();
+                        
+
                     }
 
                 } 
