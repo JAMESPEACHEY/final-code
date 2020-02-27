@@ -265,12 +265,62 @@ namespace code
         }
         public void Result()
         {
-            int percent;
+            double percent;
+            double totalpop= 0;
             if (rule == "Qualified Majority")
             {
                 percent = 55;
+                if (All == true)
+                {
+                    foreach (Countries checks in list)
+                    {
+                        if (checks.Vote != "Abstrain")
+                        {
+                            totalpop = totalpop + checks.Pop;
+                        }
+                    }
+                    foreach (Countries checking in list)
+                    {
+                        if (checking.Vote == "No")
+                        {
+                            percent = percent - (checking.Pop / totalpop);
+                        }
+                    }
+                    if (percent <= 0)
+                    {
+                        Fail();
+                    }
+                    else
+                    {
+                        Pass();
+                    }
+                }
+                else if (All == false)
+                {
+                    foreach (Countries checker in list)
+                    {
+                        if (checker.EU == true)
+                        {
+                            totalpop = totalpop + checker.Pop;
+                        }
+                    }
+                    foreach (Countries checking1 in list)
+                    {
+                        if ((checking1.Vote == "No") && (checking1.EU == true))
+                        {
+                            percent = percent - (checking1.Pop / totalpop);
+                        }
+                    }
+                    if (percent <= 0)
+                    {
+                        Fail();
+                    }
+                    else
+                    {
+                        Pass();
+                    }
 
-
+                }
             }
             else if (rule == "Unaminus")
             {
