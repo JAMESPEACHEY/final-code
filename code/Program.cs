@@ -284,7 +284,7 @@ namespace code
                 {
                        if (checking.Vote == "No")
                        {
-                           percent = percent - (totalpop/ checking.Pop);
+                           percent = percent - (checking.Pop/ totalpop * 100);
                        }
                    }
                    if (percent <= 0)
@@ -310,7 +310,7 @@ namespace code
                     {
                         if ((checking1.Vote == "No") && (checking1.EU == true))
                         {
-                            percent = percent - (totalpop/ checking1.Pop);
+                            percent = percent - (checking1.Pop / totalpop * 100);
                         }
                     }
                     if (percent <= 0)
