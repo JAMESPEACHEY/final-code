@@ -68,6 +68,7 @@ namespace code
         Countries SWEDEN = new Countries("Sweden", 10120000, false, "Yes");
         List<Countries> list = new List<Countries>();
         string rule;
+        bool All = true;
 
 
 
@@ -79,13 +80,13 @@ namespace code
             answer = Console.ReadLine().ToUpper();
             if (answer == "ALL")
             {
-                bool Selection = true;
+                 All = true;
                 
 
             }
             else if (answer == "EURO")
             {
-                bool Selection = false;
+                All = false;
                 
             }
 
@@ -95,7 +96,7 @@ namespace code
                 Console.WriteLine("Your Answer Was Not Valid! Try again");
                 goto retry;
             }
-
+            menu();
         }
 
 
@@ -225,12 +226,12 @@ namespace code
             {
                 if (details.Name.Length > 8)
                 {
-                    Console.WriteLine($"Name = {details.Name}\tPopulation = {details.Pop}\tVote  = {details.Vote}");
+                    Console.WriteLine($"Name = {details.Name}\tPopulation = {details.Pop}\tVote  = {details.Vote}\tEuroZone = {details.EU}");
 
                 }
                 else
                 {
-                    Console.WriteLine($"Name = {details.Name}\t\tPopulation = {details.Pop}\tVote  = {details.Vote}");
+                    Console.WriteLine($"Name = {details.Name}\t\tPopulation = {details.Pop}\tVote  = {details.Vote}\tEuroZone = {details.EU}");
 
                 }
             }
@@ -274,12 +275,56 @@ namespace code
             else if (rule == "Unaminus")
             {
                 percent = 100;
+                bool fail = false;
+                Console.WriteLine(All);
+                foreach (Countries check in list)
+                {
+                    if (All == true)
+                    {
+                        if (check.Vote == "No")
+                        {
+                            fail = true;
+                            Fail();
+                            
+                        }
+
+                    }
+                    else
+                    {
+                        if ((check.EU == true) && (check.Vote == "No"))
+                        {
+                            fail = true;
+                            Fail();
+                        }
+
+                    }
+                }
+                if (fail == false)
+                {
+                    Pass();
+                }
             }
             else
             {
                 Console.WriteLine("Please Select A Voting Rule.");
                 menu();
             }
+        }
+        public void Fail()
+        {
+            Console.WriteLine("             Results!");
+            Console.WriteLine("***************************************");
+            Console.WriteLine("With These Settings The Vote Would:");
+            Console.WriteLine("              FAIL");
+            Console.WriteLine("***************************************");
+        }
+        public void Pass()
+        {
+            Console.WriteLine("             Results!");
+            Console.WriteLine("***************************************");
+            Console.WriteLine("With These Settings The Vote Would:");
+            Console.WriteLine("              PASS");
+            Console.WriteLine("***************************************");
         }
         public void menu()
         {
