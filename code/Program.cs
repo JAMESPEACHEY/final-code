@@ -67,6 +67,7 @@ namespace code
         Countries SPAIN = new Countries("Spain", 46660000, true, "Yes");
         Countries SWEDEN = new Countries("Sweden", 10120000, false, "Yes");
         List<Countries> list = new List<Countries>();
+        string rule;
 
 
 
@@ -235,18 +236,57 @@ namespace code
             }
             menu();
         }
+        public void Rule()
+        {
+            Console.WriteLine("The Avaliable Rules Are:");
+            Console.WriteLine("Qualified Majority");
+            Console.WriteLine("Unaminus");
+            Console.WriteLine("What Would You Like To Change The Voting Rule Too? (QM/U)");
+            retry:
+            string Answer = Console.ReadLine().ToUpper();
+            if (Answer == "QM")
+            {
+                Console.WriteLine("The Rule is now Qualified Majority");
+                rule = "Qualified Majority";
+                menu();
+            }
+            else if (Answer == "U")
+            {
+                Console.WriteLine("The Rule is now Unaminus");
+                rule = "Unaminus";
+                menu();
+            }
+            else 
+            {
+                Console.WriteLine("Invalid Input, try Again.");
+                goto retry;
+            }
+        }
         public void Result()
-        { 
-        
-        
-        
+        {
+            int percent;
+            if (rule == "Qualified Majority")
+            {
+                percent = 55;
+
+
+            }
+            else if (rule == "Unaminus")
+            {
+                percent = 100;
+            }
+            else
+            {
+                Console.WriteLine("Please Select A Voting Rule.");
+                menu();
+            }
         }
         public void menu()
         {
             display();
             Console.WriteLine("          Voting Calculator");
             Console.WriteLine("***************************************");
-            Console.WriteLine("Your options:");
+            Console.WriteLine("Your Options:");
             Console.WriteLine("Enter 1 To Edit A Countries Vote.");
             Console.WriteLine("Enter 2 To Edit The Voting Rule.");
             Console.WriteLine("Enter 3 To Edit Countries Participating");
@@ -267,6 +307,10 @@ namespace code
             else if (Response == "1")
             {
                 EditVote();
+            }
+            else if (Response == "2")
+            {
+                Rule();
             }
             else if (Response == "4")
             {
