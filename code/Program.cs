@@ -58,17 +58,18 @@ namespace code
         Countries LITHUANIA = new Countries("Lithuania", 2794000, true, "Yes");
         Countries LUXEMBOURG = new Countries("Luxembourg", 602005000, true, "Yes");
         Countries MALTA = new Countries("Malta", 493559, true, "Yes");
-        Countries NETHERLANDS = new Countries("Netherlands ", 17180000, true, "Yes");
-        Countries POLAND = new Countries("Poland ", 37980000, false, "Yes");
-        Countries PORTUGAL = new Countries("Portugal ", 1029000, true, "Yes");
-        Countries ROMANIA = new Countries("Romania ", 19530000, false, "Yes");
-        Countries SLOVAKIA = new Countries("Slovakia ", 5450000, true, "Yes");
-        Countries SLOVANIA = new Countries("Slovenia ", 2067000, true, "Yes");
-        Countries SPAIN = new Countries("Spain ", 46660000, true, "Yes");
-        Countries SWEDEN = new Countries("Sweden ", 10120000, false, "Yes");
+        Countries NETHERLANDS = new Countries("Netherlands", 17180000, true, "Yes");
+        Countries POLAND = new Countries("Poland", 37980000, false, "Yes");
+        Countries PORTUGAL = new Countries("Portugal", 1029000, true, "Yes");
+        Countries ROMANIA = new Countries("Romania", 19530000, false, "Yes");
+        Countries SLOVAKIA = new Countries("Slovakia", 5450000, true, "Yes");
+        Countries SLOVANIA = new Countries("Slovenia", 2067000, true, "Yes");
+        Countries SPAIN = new Countries("Spain", 46660000, true, "Yes");
+        Countries SWEDEN = new Countries("Sweden", 10120000, false, "Yes");
+        List<Countries> list = new List<Countries>();
 
 
-        
+
         public void Selection()
         {
             Console.WriteLine("Are you incluiding all countries or just the Eurozone countries? (All/Euro)");
@@ -101,46 +102,81 @@ namespace code
         {
 
         }
-        
-           
-           
-        
+
+
+
+
         static void Main(string[] args)
         {
             Program p = new Program();
-            List<Countries> list = new List<Countries>();
-            list.Add(p.AUSTRIA);
-            list.Add(p.BELGIUM);
-            list.Add(p.BULGARIA);
-            list.Add(p.CROATIA);
-            list.Add(p.CYPRUS);
-            list.Add(p.CZECHREPUBLIC);
-            list.Add(p.DENMARK);
-            list.Add(p.ESTONIA);
-            list.Add(p.FINLAND);
-            list.Add(p.FRANCE);
-            list.Add(p.GERMANY);
-            list.Add(p.GREECE);
-            list.Add(p.HUNGARY);
-            list.Add(p.IRELAND);
-            list.Add(p.ITALY);
-            list.Add(p.LATVIA);
-            list.Add(p.LITHUANIA);
-            list.Add(p.LUXEMBOURG);
-            list.Add(p.MALTA);
-            list.Add(p.NETHERLANDS);
-            list.Add(p.POLAND);
-            list.Add(p.PORTUGAL);
-            list.Add(p.ROMANIA);
-            list.Add(p.SLOVAKIA);
-            list.Add(p.SLOVANIA);
-            list.Add(p.SPAIN);
-            list.Add(p.SWEDEN);
-            p.menu();
-            list.ElementAt(1).Pop;
-            
-        }
 
+            p.list.Add(p.AUSTRIA);
+            p.list.Add(p.BELGIUM);
+            p.list.Add(p.BULGARIA);
+            p.list.Add(p.CROATIA);
+            p.list.Add(p.CYPRUS);
+            p.list.Add(p.CZECHREPUBLIC);
+            p.list.Add(p.DENMARK);
+            p.list.Add(p.ESTONIA);
+            p.list.Add(p.FINLAND);
+            p.list.Add(p.FRANCE);
+            p.list.Add(p.GERMANY);
+            p.list.Add(p.GREECE);
+            p.list.Add(p.HUNGARY);
+            p.list.Add(p.IRELAND);
+            p.list.Add(p.ITALY);
+            p.list.Add(p.LATVIA);
+            p.list.Add(p.LITHUANIA);
+            p.list.Add(p.LUXEMBOURG);
+            p.list.Add(p.MALTA);
+            p.list.Add(p.NETHERLANDS);
+            p.list.Add(p.POLAND);
+            p.list.Add(p.PORTUGAL);
+            p.list.Add(p.ROMANIA);
+            p.list.Add(p.SLOVAKIA);
+            p.list.Add(p.SLOVANIA);
+            p.list.Add(p.SPAIN);
+            p.list.Add(p.SWEDEN);
+          
+
+
+            p.menu();
+        }
+        public void EditVote()
+        {
+            Console.WriteLine("Which Countries Vote Do You Want To Change?");
+            string Choice = Console.ReadLine().ToUpper();
+            foreach (Countries name in list)
+            {
+
+                if (name.Name.ToUpper() == Choice)
+                {
+                    Console.Write("Your Choice Was: ");
+                    Console.WriteLine(name.Name);
+                    Console.WriteLine("What Would You Like To Change There Vote Too? (Y/N/A)");
+                    reanswer:
+                    Choice = Console.ReadLine().ToUpper();
+                    if (Choice == "Y")
+                    {
+                        name.Vote = "Yes";
+                    }
+                    else if (Choice == "N")
+                    {
+                        name.Vote = "No";
+                    }
+                    else if (Choice == "A")
+                    {
+                        name.Vote = "Abstrain";
+                    }
+                    else 
+                    {
+                        Console.WriteLine("Invalid Input, Try Again.");
+                        goto reanswer;
+                    }
+                }
+                
+            }
+        }
         public void menu()
         {
             display();
@@ -164,7 +200,7 @@ namespace code
             }
             else if (Response == "1")
             {
-                
+                EditVote();
             }
              
 
