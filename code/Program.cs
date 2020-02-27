@@ -144,31 +144,64 @@ namespace code
         }
         public void EditVote()
         {
-            Console.WriteLine("Which Countries Vote Do You Want To Change?");
+            bool valid = false;
+            foreach (Countries display in list)
+            {
+                if (display.Name.Length > 8)
+                {
+                    Console.WriteLine($"Name = {display.Name}\tVote  = {display.Vote} ");
+
+                }
+                else
+                {
+                    Console.WriteLine($"Name = {display.Name}\t\tVote  = {display.Vote} ");
+                }
+            }
+                Console.WriteLine("Which Countries Vote Do You Want To Change?");
+            error:
             string Choice = Console.ReadLine().ToUpper();
+           // Console.WriteLine(Choice);
             foreach (Countries name in list)
             {
 
                 if (name.Name.ToUpper() == Choice)
                 {
+                   valid = true;
                     Console.Write("Your Choice Was: ");
                     Console.WriteLine(name.Name);
                     Console.WriteLine("What Would You Like To Change There Vote Too? (Y/N/A)");
-                    reanswer:
+                reanswer:
                     Choice = Console.ReadLine().ToUpper();
                     if (Choice == "Y")
                     {
                         name.Vote = "Yes";
+                        Console.Write("You Have Changed The Vote For ");
+                        Console.Write(name.Name);
+                        Console.Write(" To ");
+                        Console.WriteLine(name.Vote);
+                        menu();
                     }
                     else if (Choice == "N")
                     {
+
                         name.Vote = "No";
+                        Console.Write("You Have Changed The Vote For ");
+                        Console.Write(name.Name);
+                        Console.Write(" To ");
+                        Console.WriteLine(name.Vote);
+                        menu();
                     }
                     else if (Choice == "A")
                     {
+
                         name.Vote = "Abstrain";
+                        Console.Write("You Have Changed The Vote For ");
+                        Console.Write(name.Name);
+                        Console.Write(" To ");
+                        Console.WriteLine(name.Vote);
+                        menu();
                     }
-                    else 
+                    else
                     {
                         Console.WriteLine("Invalid Input, Try Again.");
                         goto reanswer;
@@ -176,6 +209,37 @@ namespace code
                 }
                 
             }
+            if (valid == false)
+
+            {
+                Console.WriteLine("Invalid Input, Try Again.");
+                goto error;
+
+            }
+        }
+        public void Details()
+
+        {
+            foreach (Countries details in list)
+            {
+                if (details.Name.Length > 8)
+                {
+                    Console.WriteLine($"Name = {details.Name}\tPopulation = {details.Pop}\tVote  = {details.Vote}");
+
+                }
+                else
+                {
+                    Console.WriteLine($"Name = {details.Name}\t\tPopulation = {details.Pop}\tVote  = {details.Vote}");
+
+                }
+            }
+            menu();
+        }
+        public void Result()
+        { 
+        
+        
+        
         }
         public void menu()
         {
@@ -186,11 +250,13 @@ namespace code
             Console.WriteLine("Enter 1 To Edit A Countries Vote.");
             Console.WriteLine("Enter 2 To Edit The Voting Rule.");
             Console.WriteLine("Enter 3 To Edit Countries Participating");
-            Console.WriteLine("Enter 4 To Quit.");
+            Console.WriteLine("Enter 4 To Display The Countries Info");
+            Console.WriteLine("Enter 5 To Display The Results");
+            Console.WriteLine("Enter 6 To Quit.");
             Console.WriteLine("***************************************");
-            input:
+        input:
             string Response = Console.ReadLine();
-            if (Response == "4")
+            if (Response == "6")
             {
                 return;
             }
@@ -202,13 +268,18 @@ namespace code
             {
                 EditVote();
             }
-             
-
-
+            else if (Response == "4")
+            {
+                Details();
+            }
+            else if (Response == "5")
+            {
+                Result();
+            }
             else
             {
                 Console.WriteLine("That input Is Not Valid, Try Again.");
-                goto input; 
+                goto input;
             }
         }
 
